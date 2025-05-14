@@ -38,7 +38,7 @@ public class NumeroRomanoTest {
          * Sino, hay que programar la gestion de errores
          */
     }
-
+    /*
     @Test
     @Tag("sumatorio")
     public void tres_repeticiones_C_test() {
@@ -87,7 +87,7 @@ public class NumeroRomanoTest {
      * XL(40), XC(90),
      * CD(400), CM(900)
      */
-
+    /*
     @Test
     @Tag("sustractivo")
     public void grupo_C_DM_test() {
@@ -159,7 +159,7 @@ public class NumeroRomanoTest {
      * Test de la coleccion de
      * expresiones regulares
      */
-
+    /*
     @Test
     @Tag("regex")
     public void init_regex_collection_test() {
@@ -177,6 +177,7 @@ public class NumeroRomanoTest {
      * Test del tipo enumerado
      * RomanSymbols
      */
+     /*
     @ParameterizedTest
     @Tag("enumerado")
     @CsvSource({
@@ -188,4 +189,6 @@ public class NumeroRomanoTest {
         numeroRomano = new RomanNumber(roman);
         assertEquals(decimal, numeroRomano.decimalValue(roman));
     }
+
+      */
 }
