@@ -3,12 +3,12 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>edu.estatuas</groupId>
-  <artifactId>EnZilum</artifactId>
+  <artifactId>Romans-go-home</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>EnZilum</name>
-  <url>https://github.com/Mahu2121/EnZilum</url>
+  <name>Romans-go-home</name>
+  <url>https://github.com/Mahu2121/Romans-go-home</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
