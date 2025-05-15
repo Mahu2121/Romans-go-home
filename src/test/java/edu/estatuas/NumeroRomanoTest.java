@@ -38,7 +38,7 @@ public class NumeroRomanoTest {
          * Sino, hay que programar la gestion de errores
          */
     }
-    /*
+
     @Test
     @Tag("sumatorio")
     public void tres_repeticiones_C_test() {
