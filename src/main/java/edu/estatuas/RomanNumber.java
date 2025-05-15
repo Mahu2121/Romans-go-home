@@ -1,7 +1,10 @@
 package edu.estatuas;
 
 
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import static edu.estatuas.LeterNumber.getRomanValue;
 
 public class RomanNumber {
     private String romanNumber;
@@ -17,49 +20,28 @@ public class RomanNumber {
     }
 
     public short toDecimal() {
-        return (short) sumRomanNumber() ;
-    }
-    /*
-    public short sumRomanNumber() {
-        if (sumRegex.matcher(romanNumber).find()){
-            short total = 0;
-            for (int i = 0; i < romanNumber.length(); i++) {
-                for (LeterNumber letter : LeterNumber.values()) {
-                    if (letter.getName().equals(String.valueOf(romanNumber.charAt(i)))) {
-                        total += letter.getNumber();
-                    }
-                }
-            } return total;
-        } return 0;
+        return (short) (substractRomanNumber() + sumRomanNumber());
     }
 
-     */
-    public short sumRomanNumber() {
+    private short substractRomanNumber() {
         short total = 0;
-        for (int i = 0; i < romanNumber.length(); i++) {
-            for (LeterNumber letter : LeterNumber.values()) {
-                if (letter.getName().equals(String.valueOf(romanNumber.charAt(i)))) {
-                    total += letter.getNumber();
-                }
-            }
-        } return total;
+        Matcher matcher = substractRegex.matcher(romanNumber);
+        while (matcher.find()) {
+            total += getRomanValue(matcher.group());
+        }
+        return total;
     }
 
-    /*
-    public short substractRomanNumber() {
-        if (substractRegex.matcher(romanNumber).find()) {
-            short total = 0;
-            for (int i = 0; i < romanNumber.length(); i++) {
-                for (LeterNumber letter : LeterNumber.values()) {
-                    if (letter.getName().equals(String.valueOf(romanNumber.charAt(i)))) {
-                        total += letter.getNumber();
-                    }
-                }
-            } return total;
-        } return 0;
+
+    private short sumRomanNumber() {
+        short total = 0;
+        Matcher matcher = sumRegex.matcher(romanNumber);
+        while (matcher.find()) {
+            total += getRomanValue(matcher.group());
+        }
+        return total;
     }
 
-     */
 
 
 }
