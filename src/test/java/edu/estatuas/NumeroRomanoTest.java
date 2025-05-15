@@ -87,7 +87,7 @@ public class NumeroRomanoTest {
      * XL(40), XC(90),
      * CD(400), CM(900)
      */
-    /*
+
     @Test
     @Tag("sustractivo")
     public void grupo_C_DM_test() {
