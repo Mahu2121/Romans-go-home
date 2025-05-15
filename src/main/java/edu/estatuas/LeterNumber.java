@@ -23,12 +23,20 @@ public enum LeterNumber {
         this.name = name;
     }
 
-    public int getNumber() {
+    private String getName() {
+        return name;
+    }
+
+    private int getNumber() {
         return number;
     }
 
-    public String getName() {
-        return name;
+    public static int getRomanValue(String romanNumber) {
+        for (LeterNumber letter : LeterNumber.values()) {
+            if (letter.getName().equals(romanNumber)) {
+                return letter.getNumber();
+            }
+        } return 0;
     }
 
 }
